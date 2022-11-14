@@ -25,3 +25,12 @@
   * 이미지를 흑백으로 변환시켜주는 기능 format을 grayscale로 바꿔줌
 * 축소
    * OpenCv의 resize를 이용하여 이미지를 축소 시키는 기능
+
+# pyside6
+# opencv-python
+ # python >= 3.9
+ # pyside6 >= 6.1.0
+ # pillow >= 1.7
+ # numpy
+ # opencv-python
+ 
