@@ -105,7 +105,7 @@ class MainWindow(QMainWindow):
 
 
     def show_file_dialog(self):
-        file_name =    (self, "이미지 열기", "./")
+        file_name = QFileDialog.getOpenFileName(self, "이미지 열기", "./")
         print(file_name)
         self.image = cv2.imread(file_name[0])
         h, w, _ = self.image.shape
