@@ -25,7 +25,7 @@ class MainWindow(QMainWindow):
         self.tmp_image = None
 
 
-        # save = QAction("저장", self) cv2.imwrite (img_file, )
+        # save = QAction("저장", cv2.imwrite(self.tmp_image))
         # self.menu_file.addAction(save)
 
         # 메인화면 레이아웃
@@ -100,12 +100,12 @@ class MainWindow(QMainWindow):
     #         self.image.save(fpath)
 
     def save_file_dialog(self):
-        cv2.imwrite("self.tmp_image")
+        cv2.imwrite("./new.jpg", self.tmp_image)
 
 
 
     def show_file_dialog(self):
-        file_name = QFileDialog.getOpenFileName(self, "이미지 열기", "./")
+        file_name =    (self, "이미지 열기", "./")
         print(file_name)
         self.image = cv2.imread(file_name[0])
         h, w, _ = self.image.shape
@@ -282,7 +282,7 @@ class MainWindow(QMainWindow):
 # added = masked_fg + masked_bg
 # plt.imshow(added)
 
-
+    # 모자이크
     def mosaic(self):
         small = cv2.resize(self.image, None, fx=0.1, fy=0.1, interpolation=cv2.INTER_NEAREST)
         image =  cv2.resize(small, self.image.shape[:2][::-1], interpolation=cv2.INTER_NEAREST)
