@@ -25,6 +25,8 @@
   * 이미지를 흑백으로 변환시켜주는 기능 format을 grayscale로 바꿔줌
 * 축소
    * OpenCv의 resize를 이용하여 이미지를 축소 시키는 기능
+* 모자이크
+   * 이미지 사이즈를 조절하여 모자이크를 
 
 # pyside6
 # opencv-python
